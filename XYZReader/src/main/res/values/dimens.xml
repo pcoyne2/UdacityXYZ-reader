@@ -8,4 +8,8 @@
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
 
+    <dimen name="eight_dp">8dp</dimen>
+
+    <dimen name="body_offset">0dp</dimen>
+
 </resources>
