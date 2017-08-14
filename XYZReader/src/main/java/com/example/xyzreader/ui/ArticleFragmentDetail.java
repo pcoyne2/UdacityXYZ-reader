@@ -22,6 +22,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,6 +35,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
+
+import static android.view.View.GONE;
 
 /**
  * Created by Patrick Coyne on 8/9/2017.
@@ -205,7 +208,15 @@ public class ArticleFragmentDetail extends Fragment implements
         TextView titleView = (TextView) mRootView.findViewById(R.id.article_title);
         TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
         bylineView.setMovementMethod(new LinkMovementMethod());
-        TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
+        final TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
+        final Button readMore = (Button)mRootView.findViewById(R.id.read_more);
+        readMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bodyView.setMaxLines(Integer.MAX_VALUE);
+                readMore.setVisibility(GONE);
+            }
+        });
         Toolbar toolbar = (Toolbar)mRootView.findViewById(R.id.detail_toolbar);
 
 

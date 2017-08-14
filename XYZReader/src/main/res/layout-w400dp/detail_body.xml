@@ -31,7 +31,6 @@
             android:maxWidth="400dp"
             android:maxLines="50"
             android:lineSpacingMultiplier="0.9"
-            android:text="@string/tool_title"
             />
 
         <TextView
@@ -39,8 +38,8 @@
             style="?android:attr/textAppearanceSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#8fff"
-            android:text="@string/tool_author"/>
+            android:textColor="#8fff"/>
+
     </LinearLayout>
 
     <TextView
@@ -54,8 +53,15 @@
         android:textColorLink="@color/theme_accent"
         android:textSize="@dimen/detail_body_text_size"
         android:maxLines="50"
-        android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
-        android:text="@string/ipsum"/>
+        android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"/>
+    <Button
+        android:id="@+id/read_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:text="Read More"
+        android:textColor="@android:color/black"/>
 
 
 </LinearLayout>
